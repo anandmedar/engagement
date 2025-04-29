@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section.home {
+  padding: 80px 20px;
+  text-align: center;
+  background: #1a1a1a;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  gap: 10px;
+  position: relative;
+  right: 0;
+  width: 100%;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+section.home.active {
+  right: 300px;
+}
+
+section.home .toggle {
+  justify-self: end;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url("https://img.icons8.com/ios-filled/50/ffffff/menu--v1.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+section.home .toggle.active {
+  background: url("https://img.icons8.com/ios-filled/50/ffffff/multiply.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  cursor: pointer;
+}
+
+section.home .row {
+  display: flex;
+  gap: 40px;
+}
+
+section.home .row .home-content {
+  width: 50%;
+}
+
+section.home .row .home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: maroon;
+}
+
+section.home .row .home-content p {
+  font-size: 1.2rem;
+  color: mintcream;
+  line-height: 1.6;
+}
+
+section.home .row .home-image {
+  margin-top: -180px;
+}
+
+section.home .row .home-image img.animated-image {
+  transform-origin: center;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section.story {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+section.story h2 {
+  font-size: 64px;
+}
+
+section.story p {
+  font-size: 18px;
+}
+
+section.story ul {
+  text-align: left;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+section.story img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+section.story img.animated {
+  transition: opacity 0.3s ease-in-out;
+  animation: reveal 2s;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+section.proposal {
+  padding: 80px 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+section.proposal h2 {
+  font-size: 64px;
+}
+
+section.proposal img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+section.proposal img.animated {
+  transition: opacity 0.3s ease-in-out;
+}
+
+section.gallery {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section.gallery .gallery-wrapper h2 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+section.gallery .gallery-wrapper h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+section.gallery .gallery-wrapper p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+section.gallery .gallery-wrapper p i {
+  text-align: left;
+  color: #000;
+}
+
+section.gallery .gallery-wrapper .swiper {
+  width: 100%;
+}
+
+section.gallery .gallery-wrapper .swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+section.gallery .gallery-wrapper .swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+section.gallery .gallery-wrapper .swiper .swiper-slide img:hover {
+  transform: scale(1.03);
+}
+
+section.contact {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+section.contact video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+section.contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+
+section.contact .contact-meta {
+  position: relative;
+  z-index: 10;
+  left: -40px;
+}
+
+section.contact .contact-meta h2 {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+section.contact .contact-meta h3 {
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+section.contact .contact-meta p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+section.contact .contact-meta a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+section.contact .contact-meta a:hover {
+  letter-spacing: 6px;
+}
+
+section.contact footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 1.6rem 1rem;
+  text-align: center;
+  color: #FFF;
+}
+
+section.contact footer p span {
+  color: #03a9f4;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: #03a9f4;
+}
+
+@media screen and (max-width: 768px) {
+  section.home .row {
+    display: grid;
+  }
+
+  section.home .row .home-content {
+    width: 100%;
+  }
+
+  section.home .row .home-image {
+    width: 100%;
+    margin-top: -120px;
+  }
+}
