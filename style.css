@@ -251,6 +251,7 @@ section.contact .contact-meta {
   position: relative;
   z-index: 10;
   left: -40px;
+  margin-top: 80px;
 }
 
 section.contact .contact-meta h2 {
