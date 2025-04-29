@@ -122,6 +122,11 @@ section.story img.animated {
   animation: reveal 2s;
 }
 
+section.story img.animated:hover {
+  transition: opacity 0.3s ease-in-out;
+  animation: reveal 2s;
+}
+
 @keyframes reveal {
   0% {
     opacity: 0.1;
